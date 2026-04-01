@@ -1,0 +1,42 @@
+.psicologo-card{
+    border-radius: 40px;
+    background-color: var(--bgCardsColor);
+    padding: 2rem;
+    border: 2px solid var(--borderColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.psicologo-card:hover{
+    cursor: pointer;
+    box-shadow: 10px 10px 20px 5px rgba(206, 225, 245, 0.9);
+}
+
+.psicologo-card span{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.psicologo-card span img{
+    border-radius: 12px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    object-fit:cover;
+}
+
+.psicologo-card-especialidad{
+    color:var(--primaryColor)
+}
+
+.psicologo-card-description{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.psicologo-card-description button{
+    margin-top: 1rem;
+    align-items: center;
+}

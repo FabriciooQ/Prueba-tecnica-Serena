@@ -1,0 +1,24 @@
+.mis-sesiones-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+
+.mis-sesiones-container table{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 80%;
+    margin-top: 2rem;
+    border-spacing: 0 12px;
+}
+
+.mis-sesiones-container table th{
+    text-align: center;
+}
+
+.mis-sesiones-nueva{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}

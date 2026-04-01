@@ -3,6 +3,8 @@ import path from "path"
 import { fileURLToPath } from "url"
 import psicologoRouter from "./routes/psicologos.route.js"
 import sessionRouter from "./routes/sessions.route.js"
+import cors from "cors"
+import empleadoRouter from "./routes/empleados.route.js"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -10,8 +12,11 @@ const __dirname = path.dirname(__filename)
 
 const app = express()
 
+//para permitir solicitudes de otro dominio
+app.use(cors()) 
 app.use("/psychologists", psicologoRouter)
 app.use("/sessions", sessionRouter)
+app.use("/empleado", empleadoRouter)
 
 app.use((req, res)=>{
     res.status(404). send("No se encontro la pagina")

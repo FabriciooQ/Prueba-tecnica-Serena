@@ -3,11 +3,11 @@ import { empleados } from "../data/dataMock.js";
 
 class EmpleadoRepository{
     constructor(){
-        this.empleados = empleados.map(e => new Empleado(e.id, e.nombre))
+        this.empleados = empleados.map(e => new Empleado(e.id, e.nombre, e.foto))
     }
 
     findById(id){
-        return this.empleados.find(e=>e.id ===id)
+        return this.empleados.find(e=>e.id === id)
     }
 }
 

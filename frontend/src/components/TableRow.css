@@ -1,0 +1,44 @@
+.table-row{
+  background: var(--borderColor);
+  border: 2px solid black;
+}
+
+.table-row td{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    vertical-align: middle;
+
+}
+
+.tr-profesional{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.tr-profesional img{
+    width: 50px;
+    border-radius: var(--buttonBorder);
+}
+
+.tr-fecha{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.tr-accion{
+    display: flex;
+    justify-content: center;
+}
+
+.tr-accion button{
+    background-color: var(--textoColor);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+.tr-accion button:active{
+    transform: none;
+}

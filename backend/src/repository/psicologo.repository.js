@@ -5,7 +5,7 @@ import {psicologosJSON} from "../data/dataMock.js"
 class PsicologoRepository {
     constructor(){
         this.psicologos  = psicologosJSON.map( (o) => {
-            let p = new Psicologo(o.id, o.nombre, o.especialidad, o.disponibilidad) 
+            let p = new Psicologo(o.id, o.nombre, o.especialidad, o.disponibilidad, o.descripcion, o.foto) 
             return p
         })
     }

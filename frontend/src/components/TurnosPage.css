@@ -1,0 +1,54 @@
+
+.turnos-button-volver{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.button-volver{
+    background-color: var(--textoColor);
+    border-radius: 20px;
+}
+
+
+.turnos-card{
+    margin: auto;
+    background-color: var(--bgCardsColor);
+    border: 2px solid var(--borderColor);
+    border-radius: var(--cardBorder);
+    width: max-content;
+    padding: 3rem 3rem;
+    box-shadow:  10px 10px 20px 5px rgba(206, 225, 245, 0.9) ;
+}
+
+.turnos-card-profesional{
+    display: grid;
+    column-gap: 15px;
+    grid-template-columns: max-content max-content;
+}
+.turnos-card-profesional img{
+    grid-row: 1;
+    grid-column: 1;
+    border-radius: var(--buttonBorder);
+    width: 200px;
+}
+.turnos-card-profesional div h3{
+    color: var(--primaryGradient);
+}
+
+
+.date-picker-container{
+    padding-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.turnos-button-confirmar{
+    margin-top: 1.5rem;
+    width: 100%;
+}

@@ -1,0 +1,29 @@
+.sesiones-container{
+    padding: 1rem;
+}
+.sesiones-container h1,
+.sesiones-texto{
+    text-align: center;
+}
+.sesiones-container h1{
+    letter-spacing: 0.04em;
+    margin-top: 10px;
+}
+.sesiones-texto{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}    
+
+.psicologo-card-container{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(600px, 1fr));
+    gap: 1rem;
+
+}
+
+@media (max-width: 600px) {
+    .psicologo-card-container{
+        grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
+    }
+}

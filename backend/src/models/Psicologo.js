@@ -2,12 +2,14 @@ import { EstadoTurno } from "./EstadoTurno.js";
 import Turno from "./Turno.js";
 
 export default class Psicologo{
-    constructor(id, nombre, especialidad, disponibilidad){
+    constructor(id, nombre, especialidad, disponibilidad, descripcion, foto){
         this.id = id;
         this. nombre = nombre;
         this.especialidad = especialidad;
         this.disponibilidad = disponibilidad;
         this.turnos = this.generarAgendaDeTurnos()
+        this.descripcion = descripcion,
+        this.foto = foto
     }
 
     generarAgendaDeTurnos() {

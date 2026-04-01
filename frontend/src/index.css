@@ -1,0 +1,84 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+  
+  /*COLORES*/
+  --primaryColor: #2563EB;
+  --primaryGradient: #6366F1;
+  --bgColor: #FAFBFF;
+  --bgCardsColor: #FFFFFF;
+  --titleColor: #0F172A;
+  --textoColor:#64748B;
+  --enfasisColor: #F472B6;
+  --statusColor: #22C55E;
+  --borderColor: #F1F5F9;
+  
+  /*FUENTES*/
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal; 
+  
+  /*BORDES*/
+  --buttonBorder:24px;
+  --cardBorder:32px;
+}
+
+html,body{
+  background-color: var(--bgColor);
+}
+
+section{
+  background-color: var(--bgColor);
+}
+
+h1{
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: var(--titleColor);
+}
+
+h2 h3{
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--textoColor);
+}
+
+label{
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  font-size: smaller;
+}
+
+button,
+.btn{
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: white;
+  font-size: smaller;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--primaryColor);
+  border:none;
+  padding: 1rem;
+  border-radius: var(--buttonBorder);
+}
+
+button:hover,
+.btn:hover{
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+button:active,
+.btn:active{
+  transform: translateY(1px);
+}
+.btn:visited{
+  text-decoration: none;
+}
