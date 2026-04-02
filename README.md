@@ -9,61 +9,61 @@ El proyecto no presenta base de datos, simplemente archivos mockeados que simula
 
 ## Instalación
 Clonar el repositorio:  
-`   git clone <URL_DEL_REPOSITORIO> `
-`   cd serena                       `
+`   git clone <URL_DEL_REPOSITORIO> `  
+`   cd serena                       `  
 
 ### Backend
 Correr los siguientes comandos:  
-`    cd backend     `
-`    npm install    `
+`    cd backend     `  
+`    npm install    `  
     
 ### Frontend
 Correr los siguientes comandos:  
-`    cd frontend    `
-`    npm install    `
+`    cd frontend    `  
+`    npm install    `  
 
 ## Ejecucion
 ### Backend
 Abrir una terminal en la raiz del proyecto y correr los comandos:  
-`    cd backend     `
-`    cd src          `
-`    node server.js  `
+`    cd backend     `  
+`    cd src          `  
+`    node server.js  `  
 El backend quedara corriendo en localhost:3000  
 
 ### Frontend
 Abrir una terminal en la raiz del proyecto y correr los comandos:  
-`    cd backend     `
-`    node server.js `
+`    cd backend     `  
+`    node server.js `  
 El frontend quedara corriendo en localhost:5173  
 
 ## Estructura del repositorio
-`PRUEBA-TECNICA-SERENA/`
-`├── backend/`
+`PRUEBA-TECNICA-SERENA/`  
+`├── backend/`  
+`│   ├── src/`  
+`│   │   ├── controllers/   # Lógica de negocio`  
+`│   │   ├── data/          # Datos estáticos o seed`  
+`│   │   ├── DTO/           # Objetos de transferencia de datos`  
+`│   │   ├── models/        # Modelos de la base de datos`  
+`│   │   ├── repository/    # Acceso y consultas a la base de datos`  
+`│   │   ├── routes/        # Rutas de la API`  
+`│   │   └── services/      # Lógica adicional o utilidades`  
+`│   │       └── pruebajs.js`  
+`│   ├── package.json`  
+`│   └── server.js`  
+`├── frontend/`  
+`│   ├── public/            # Archivos estáticos`  
 `│   ├── src/`
-`│   │   ├── controllers/   # Lógica de negocio`
-`│   │   ├── data/          # Datos estáticos o seed`
-`│   │   ├── DTO/           # Objetos de transferencia de datos`
-`│   │   ├── models/        # Modelos de la base de datos`
-`│   │   ├── repository/    # Acceso y consultas a la base de datos`
-`│   │   ├── routes/        # Rutas de la API`
-`│   │   └── services/      # Lógica adicional o utilidades`
-`│   │       └── pruebajs.js`
-`│   ├── package.json`
-`│   └── server.js`
-`├── frontend/`
-`│   ├── public/            # Archivos estáticos`
-`│   ├── src/`
-`│   │   ├── components/    # Componentes React reutilizables`
-`│   │   ├── services/      # Funciones para consumir APIs`
-`│   │   ├── App.jsx`
-`│   │   ├── App.css`
-`│   │   ├── index.css`
-`│   │   ├── main.jsx`
-`│   │   └── index.html`
-`│   ├── package.json`
-`│   └── vite.config.js`
-`└── README.md`
-
+`│   │   ├── components/    # Componentes React reutilizables`  
+`│   │   ├── services/      # Funciones para consumir APIs`  
+`│   │   ├── App.jsx`  
+`│   │   ├── App.css`  
+`│   │   ├── index.css`  
+`│   │   ├── main.jsx`  
+`│   │   └── index.html`  
+`│   ├── package.json`  
+`│   └── vite.config.js`  
+`└── README.md`  
+ 
 ## Objetivos alcanzados
 ### Backend
     -Definición de rutas RESTful solicitadas.  
