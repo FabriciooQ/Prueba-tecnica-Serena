@@ -1,8 +1,14 @@
 .mis-sesiones-container{
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     gap:1rem;
+    margin-top: 2rem;
+}
+
+.mis-sesiones-container h1{
+    letter-spacing: 0.04em;
 }
 
 .mis-sesiones-container table{
@@ -11,6 +17,7 @@
     width: 80%;
     margin-top: 2rem;
     border-spacing: 0 12px;
+    table-layout: fixed;
 }
 
 .mis-sesiones-container table th{
@@ -21,4 +28,16 @@
     padding-top: 15px;
     display: flex;
     justify-content: center;
+}
+
+@media(max-width: 750px){
+    .mis-sesiones-container table{
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+        width: 100%;
+        margin-top: 2rem;
+        border-spacing: 0 12px;
+        table-layout: fixed;
+    }
+
 }

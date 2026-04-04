@@ -1,5 +1,8 @@
 import { EstadoTurno } from "./EstadoTurno.js";
 import Turno from "./Turno.js";
+import dayjs from 'dayjs';
+import utc from "dayjs/plugin/utc.js"
+import timezone from "dayjs/plugin/timezone.js"
 
 export default class Psicologo{
     constructor(id, nombre, especialidad, disponibilidad, descripcion, foto){
@@ -13,6 +16,8 @@ export default class Psicologo{
     }
 
     generarAgendaDeTurnos() {
+        dayjs.extend(utc)
+        dayjs.extend(timezone)
         let id=1;
         const horaDesde = 9;
         const horaHasta = 18;
@@ -20,13 +25,10 @@ export default class Psicologo{
         const agenda = [];
 
         for (let i = 0; i < 30; i++) {
-            const fechaDia = new Date();
-            fechaDia.setDate(fechaDia.getDate() + i);
-            fechaDia.setHours(horaDesde, 0, 0, 0); 
+            const fechaDia = dayjs().utc().add(i, "day").startOf("hour").hour(horaDesde);
 
-            for (let j = 0; j < (horaHasta - horaDesde); j += duracionTurno) {
-                const turnoFecha = new Date(fechaDia);
-                turnoFecha.setHours(horaDesde + j); 
+            for (let j = horaDesde; j < horaHasta; j += duracionTurno) {
+                const turnoFecha = fechaDia.hour(j);
                 agenda.push(new Turno(id, turnoFecha, EstadoTurno.DISPONIBLE));
                 id++;
             }

@@ -29,7 +29,7 @@ export default function SesionesPage(){
                 <p>{error}</p> 
                 :
                 <div className='psicologo-card-container'>
-                    {psicologos.map(p=><PsicologoCard psicologo={p}/>)}
+                    {psicologos.map((p,i)=><PsicologoCard key={i} psicologo={p}/>)}
                 </div>
             }
         </section>

@@ -1,29 +1,26 @@
 import './MisSesionesPage.css'
 import { Link } from "react-router-dom"
-
+import { getSesiones } from '../services/api'
+import { useEffect, useState } from 'react'
 import TableRow from './TableRow'
 
 export default function MisSesionesPage(){
-    const data = [
-        {
-            nombre:"Dra Elena Rossi",
-            especialidad: "Ansiedad",
-            fecha:"Lunes, 15 de mayo",
-            hora:"09:00hs"
-        },
-            {
-            nombre:"Dra Elena Rossi",
-            especialidad: "Ansiedad",
-            fecha:"Lunes, 15 de mayo",
-            hora:"09:00hs"
-        },
-        {
-            nombre:"Dra Elena Rossi",
-            especialidad: "Ansiedad",
-            fecha:"Lunes, 15 de mayo",
-            hora:"09:00hs"
-        }    
-    ]
+    const [sesiones, setSesiones] = useState([])
+
+    useEffect(()=>{
+        async function loadSesiones(){
+            try{
+                const data = await getSesiones(1)
+                setSesiones(data)
+
+            // eslint-disable-next-line no-unused-vars
+            }catch(error){
+                console.error("error al obtener sesiones")
+            }
+        }
+        loadSesiones()
+    },[])
+    
 
     return(
     <section className='mis-sesiones-container'>
@@ -31,12 +28,14 @@ export default function MisSesionesPage(){
         <p>Gestiona tus encuentros programados y el historial</p>
         <table>
             <thead>
-                <th>Profesional</th>
-                <th>Fecha y hora</th>
-                <th>Acciones</th>
+                <tr>
+                    <th>Profesional</th>
+                    <th>Fecha y hora</th>
+                    <th>Acciones</th>
+                </tr>
             </thead>
             <tbody>
-                {data.map(d => <TableRow data={d}/>)}
+                {sesiones.map((d,i) => {return<TableRow key={i} data={d}/>})}
             </tbody>
         </table>
 

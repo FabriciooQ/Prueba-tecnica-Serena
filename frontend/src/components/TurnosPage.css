@@ -34,6 +34,11 @@
     grid-column: 1;
     border-radius: var(--buttonBorder);
     width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.turnos-card-profesional div{
+    padding-top: 12px;
 }
 .turnos-card-profesional div h3{
     color: var(--primaryGradient);
@@ -51,4 +56,23 @@
 .turnos-button-confirmar{
     margin-top: 1.5rem;
     width: 100%;
+}
+
+@media (max-width: 650px){
+    .turnos-card{
+        width: 80%;
+    }
+
+    .turnos-card-profesional{
+        display: flex;
+        flex-direction: column;
+        column-gap: 5px;
+        grid-template-columns:1fr 1fr;
+    }
+
+    .turnos-card-profesional img{
+        align-self: center;
+
+    }
+
 }

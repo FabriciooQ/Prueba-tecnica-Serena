@@ -8,6 +8,7 @@
     justify-content: space-between;
     background-color: #ffffffc9;
     backdrop-filter: blur(5px);
+    z-index: 10000;
 }
 
 .navBar h1{
@@ -80,4 +81,26 @@
 .nav-container-empleado p:first-child{
     grid-row: 1;
     grid-column: 2;
+}
+
+@media (max-width: 600px){
+    .navBar{
+        justify-content: start;
+    }
+    .navBar h1{
+        display: none;
+    }
+    .nav-container-sesiones{
+        width: 100%;
+        justify-content: end;
+    }
+    .nav-container-empleado{
+        padding-left: 1rem;
+        padding-right:0.5rem;
+        display:block
+    }
+    .nav-container-empleado p{
+        display: none;
+    }
+
 }

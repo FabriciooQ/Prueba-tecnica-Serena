@@ -1,8 +1,5 @@
 import './NavBar.css'
-import { useEffect } from 'react'
-import { useState } from 'react'
 import { Link } from "react-router-dom"
-import { getEmpleado } from '../services/api'
 
 
 export default function NavBar({empleado}){

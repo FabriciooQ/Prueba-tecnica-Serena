@@ -14,12 +14,14 @@ class SessionService{
         if(!psicologo || !psicologo.disponibilidad){
             return null
         }
-        const turno = psicologo.turnos.find(t=>t.id=sessionDTO.idTurno)
+        const turno = psicologo.turnos.find(t=>t.id==sessionDTO.idTurno)
         if(!turno || turno.estado === EstadoTurno["NO DISPONIBLE"]){
             return null;
         }
+        console.log("buscando empleado")
         const empleado = empleadosRepository.findById(sessionDTO.idEmpleado)
         if(!empleado){
+            console.log("empleado nulo")
             return null
         }
         turno.estado = EstadoTurno["NO DISPONIBLE"]

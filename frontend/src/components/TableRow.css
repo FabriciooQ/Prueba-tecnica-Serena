@@ -7,6 +7,7 @@
     padding-top: 16px;
     padding-bottom: 16px;
     vertical-align: middle;
+    text-align: left;
 
 }
 
@@ -18,13 +19,20 @@
 }
 .tr-profesional img{
     width: 50px;
-    border-radius: var(--buttonBorder);
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .tr-fecha{
     display: flex;
     flex-direction: column;
     justify-self: center;
+    
+}
+
+.tr-fecha p{
+    color:var(--textoColor);
 }
 
 .tr-accion{
@@ -41,4 +49,16 @@
 }
 .tr-accion button:active{
     transform: none;
+}
+
+@media(max-width: 750px){
+    .tr-profesional{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10px;
+    }
+    .tr-profesional img{
+        display: none;
+    }
 }
